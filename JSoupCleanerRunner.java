@@ -19,7 +19,13 @@ public class JSoupCleanerRunner {
         "section",
         "article",
         "aside",
-        "footer"
+        "footer",
+        "form",
+        "input",
+        "fieldset",
+        "title",
+        "time",
+        "noscript"
       );
       html = Jsoup.clean(html, whitelist);
       
