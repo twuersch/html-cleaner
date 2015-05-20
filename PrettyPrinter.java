@@ -19,7 +19,7 @@ public class PrettyPrinter implements NodeVisitor {
       
       TextNode textNode = (TextNode) node;
       String text = textNode.text();
-      System.out.print("TEXT: " + textNode.text().substring(0, Math.min(textNode.text().length(), 20)));
+      System.out.print("TEXT: " + textNode.text());
       
       if (text.matches("\\s*")) {
         System.out.print("(Whitespace)");

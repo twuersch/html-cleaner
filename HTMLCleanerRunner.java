@@ -9,19 +9,14 @@ public class HTMLCleanerRunner {
     try {
       
       // Read the example HTML file into a string
-      String html = U.readFile("test.html");
+      String html = U.readFile("simple.html");
       
       // Parse the HTML into a Document...
       Document document = Jsoup.parse(html);
       
-      // ... and clean it...
-      HTMLCleaner htmlCleaner = new HTMLCleaner();
-      NodeTraversor nodeTraversor = new NodeTraversor(htmlCleaner);
-      nodeTraversor.traverse(document);
-      
       // ...and print it out.
       PrettyPrinter prettyPrinter = new PrettyPrinter();
-      nodeTraversor = new NodeTraversor(prettyPrinter);
+      NodeTraversor nodeTraversor = new NodeTraversor(prettyPrinter);
       nodeTraversor.traverse(document);
       
     } catch (Exception exception) {

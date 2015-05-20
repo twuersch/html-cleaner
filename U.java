@@ -8,7 +8,7 @@ public class U {
   }
   
   public static String readFile(String filename) throws IOException {
-    File file = new File("test.html");
+    File file = new File(filename);
     Scanner scanner = new Scanner(file).useDelimiter("\\A");
     return scanner.hasNext() ? scanner.next() : "";
   }
